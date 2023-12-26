@@ -1,0 +1,176 @@
+@import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: Work Sans; }
+
+a {
+  text-decoration: none; }
+
+.resize-active #quote-box > div {
+  transition-duration: 0s; }
+
+#body {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  transition: background-color 0.3s ease-out;
+  padding: 20px 0; }
+
+#quote-box {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 660px;
+  padding: 30px 20px;
+  transition: min-height 0.3s ease-out; }
+
+#quote-box > div {
+  border-radius: 8px;
+  padding: 40px;
+  transition: all 0.3s linear; }
+
+.text-container {
+  margin: 0 4px;
+  overflow: hidden; }
+
+#text {
+  font-size: 1.75rem;
+  font-weight: 700;
+  min-height: 100px;
+  overflow-wrap: break-word; }
+
+#author {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1.75rem; }
+
+button {
+  border: none;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
+  height: 40px;
+  min-width: 40px;
+  margin: 4px; }
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transition: box-shadow 0.2s ease-in, transform 0.2s ease-in; }
+
+button:active {
+  transform: scale(1);
+  box-shadow: none;
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out; }
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+i.fa-brands {
+  font-size: 1.25em; }
+
+i.fa-quote-left {
+  position: absolute;
+  top: -20px;
+  font-size: 5.5em; }
+
+.by {
+  margin-top: 1.75rem;
+  opacity: 0.6; }
+
+h5 {
+  z-index: 2;
+  opacity: 1;
+  color: var(--color);
+  font-weight: 300;
+  font-size: 1em;
+  margin: 4rem 2rem 1rem 2rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out; }
+
+h5:hover {
+  color: var(--hoverColor);
+  cursor: default;
+  transform: scale(1.02); }
+
+h5 a {
+  position: relative;
+  color: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 0px solid #ffffff;
+  transition: all 0.2s linear;
+  text-wrap: nowrap; }
+
+h5 a:hover {
+  color: var(--hoverColor); }
+
+h5 a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0rem;
+  width: 100%;
+  border-bottom: 0rem solid var(--hoverColor);
+  transition: all 0.2s linear; }
+
+h5 a:hover::after {
+  width: 100%;
+  bottom: -0.25rem;
+  border-bottom: 0.129rem solid var(--hoverColor); }
+
+.github-corner {
+  fill: var(--gc-fill);
+  color: var(--gc-color);
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+  z-index: 999;
+  transition: all 560ms ease;
+  transform-origin: top right; }
+  .github-corner .octo-arm {
+    transform-origin: center; }
+  .github-corner .octo-body {
+    transition: scale 0.5s ease;
+    transform-origin: center; }
+  .github-corner:active {
+    scale: 0.9; }
+  .github-corner:hover {
+    fill: var(--gc-fill-hover);
+    color: var(--gc-color-hover); }
+    .github-corner:hover .octo-body {
+      scale: 1.1; }
+    .github-corner:hover .octo-arm {
+      animation: octocat-wave 560ms ease-in-out; }
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0); }
+  20%,
+  60% {
+    transform: rotate(-25deg); }
+  40%,
+  80% {
+    transform: rotate(10deg); } }
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none; }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out; } }
